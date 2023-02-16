@@ -1,25 +1,24 @@
+const choices = ["rock", "paper", "scissors"];
+
+console.log("Testing, testing, 1, 2, 3...");
 
 function getComputerChoice() {
-    computerChoice = Math.floor(Math.random() * 3);
-    if (computerChoice === 0) {return"rock"}
-    else if(computerChoice === 1) {return"paper"}
-    else {return"scissors"};
-}
-
+    computerChoice =  choices[Math.floor(Math.random() * choices.length)];
+    return computerChoice;
+  }
+  
 function getPlayerChoice() {
-    let playerChoice = prompt ("Choose you weapon");
-    return (playerChoice);
+    let playerChoice = prompt("choose rock, paper, or scissors");
+    return playerChoice;
 }
-
-function playRound(playerChoice, computerChoice) {
-   
-    let playerChoice = getPlayerChoice();
-    let computerChoice = getComputerChoice();
-    if ((playerChoice == rock) & (computerChoice == scissors)
-    || (playerChoice == paper) & (computerChoice == rock)
-    || (playerChoice == scissors) & (computerChoice == paper))
-    {return(`YOU WIN!!! You chose ${playerChoice}, Computer chose ${computerChoice}`)}
-    else if (playerChoice = computerChoice) {
-        return(`It's a tie! You both chose ${playerChoice}`)
-    }else {return(`YOU Lose!!! You chose ${playerChoice}, Computer chose ${computerChoice}`)}
+function playRound() {
+    const computerChoice = getComputerChoice();
+    const playerChoice = getPlayerChoice();
+    if(computerChoice == playerChoice){
+    return(`Tie, Computer chose ${computerChoice}, you chose ${playerChoice}`)}
+    else if (computerChoice == "rock" && playerChoice == "paper"
+    || computerChoice == "paper" && playerChoice == "scissors"
+    || computerChoice == "scissors" && playerChoice == "rock"){
+        return(`You win! Computer chose ${computerChoice}, you chose ${playerChoice}`)
+    }else {return(`You lose, computer chose ${computerChoice}, you shoce ${playerChoice}`)}
 }
