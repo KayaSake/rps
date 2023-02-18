@@ -9,16 +9,18 @@ function getComputerChoice() {
   
 function getPlayerChoice() {
     let playerChoice = prompt("choose rock, paper, or scissors");
+    playerChoice.toLocaleLowerCase;
     return playerChoice;
 }
 function playRound() {
     const computerChoice = getComputerChoice();
     const playerChoice = getPlayerChoice();
     if(computerChoice == playerChoice){
-    return(`Tie, Computer chose ${computerChoice}, you chose ${playerChoice}`)}
+    return('Tie! you chose ${playerChoice}, computer chose ${computerChoice}')}
     else if (computerChoice == "rock" && playerChoice == "paper"
     || computerChoice == "paper" && playerChoice == "scissors"
     || computerChoice == "scissors" && playerChoice == "rock"){
-        return(`You win! Computer chose ${computerChoice}, you chose ${playerChoice}`)
-    }else {return(`You lose, computer chose ${computerChoice}, you shoce ${playerChoice}`)}
+        return(`Win! you chose ${playerChoice}, computer chose ${computerChoice}` )
+    }else {return(`Lose! you chose ${playerChoice}, computer chose ${computerChoice}`)}
 }
+
