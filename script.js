@@ -1,4 +1,17 @@
-const choices = ["rock", "paper", "scissors"];
+
+const div = document.createElement("div");
+div.id = "div";
+document.body.appendChild(div);
+
+const btn = document.createElement('button');
+btn.onclick = playRound;
+btn.innerText = 'Play Round';
+btn.id = 'btn';
+div.appendChild(btn);
+
+const choices = ["rock", "paper", "scissors"]; {
+
+}
 
 console.log("Testing, testing, 1, 2, 3...");
 
