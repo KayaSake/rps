@@ -3,11 +3,29 @@ const div = document.createElement("div");
 div.id = "div";
 document.body.appendChild(div);
 
-const btn = document.createElement('button');
-btn.onclick = playRound;
-btn.innerText = 'Play Round';
-btn.id = 'btn';
-div.appendChild(btn);
+const rock = document.createElement('button');
+rock.onclick = chooseRock;
+rock.innerText = 'Rock';
+rock.id = 'rock';
+div.appendChild(rock);
+
+const paper = document.createElement('button');
+paper.onclick = choosePaper;
+paper.innerText = 'Paper';
+paper.id = 'paper';
+div.appendChild(paper);
+
+const scissors = document.createElement('button');
+scissors.onclick = chooseScissors;
+scissors.innerText = 'Scissors';
+scissors.id = 'scissors';
+div.appendChild(scissors);
+
+const play = document.createElement('button');
+play.onclick = playRound;
+play.innerText = `play`;
+play.id = play;
+div.appendChild(play);
 
 const choices = ["rock", "paper", "scissors"]; {
 
@@ -29,11 +47,46 @@ function playRound() {
     const computerChoice = getComputerChoice();
     const playerChoice = getPlayerChoice();
     if(computerChoice == playerChoice){
-    return('Tie! you chose ${playerChoice}, computer chose ${computerChoice}')}
+    return alert(`Tie! you chose ${playerChoice}, computer chose ${computerChoice}`)}
     else if (computerChoice == "rock" && playerChoice == "paper"
     || computerChoice == "paper" && playerChoice == "scissors"
     || computerChoice == "scissors" && playerChoice == "rock"){
-        return(`Win! you chose ${playerChoice}, computer chose ${computerChoice}` )
-    }else {return(`Lose! you chose ${playerChoice}, computer chose ${computerChoice}`)}
+        alert(`Win! you chose ${playerChoice}, computer chose ${computerChoice}` )
+    }else {alert(`Lose! you chose ${playerChoice}, computer chose ${computerChoice}`)}
 }
 
+function chooseRock() {
+    const computerChoice = getComputerChoice();
+    const playerChoice = "rock";
+    if(computerChoice == playerChoice){
+    return alert(`Tie! you chose ${playerChoice}, computer chose ${computerChoice}`)}
+    else if (computerChoice == "rock" && playerChoice == "paper"
+    || computerChoice == "paper" && playerChoice == "scissors"
+    || computerChoice == "scissors" && playerChoice == "rock"){
+        return alert(`Win! you chose ${playerChoice}, computer chose ${computerChoice}` )
+    }else {return alert(`Lose! you chose ${playerChoice}, computer chose ${computerChoice}`)}
+}
+
+function choosePaper() {
+    const computerChoice = getComputerChoice();
+    const playerChoice = "paper";
+    if(computerChoice == playerChoice){
+    return alert(`Tie! you chose ${playerChoice}, computer chose ${computerChoice}`)}
+    else if (computerChoice == "rock" && playerChoice == "paper"
+    || computerChoice == "paper" && playerChoice == "scissors"
+    || computerChoice == "scissors" && playerChoice == "rock"){
+        return alert(`Win! you chose ${playerChoice}, computer chose ${computerChoice}` )
+    }else {return alert(`Lose! you chose ${playerChoice}, computer chose ${computerChoice}`)}
+}
+
+function chooseScissors() {
+    const computerChoice = getComputerChoice();
+    const playerChoice = "scissors";
+    if(computerChoice == playerChoice){
+    return alert(`Tie! you chose ${playerChoice}, computer chose ${computerChoice}`)}
+    else if (computerChoice == "rock" && playerChoice == "paper"
+    || computerChoice == "paper" && playerChoice == "scissors"
+    || computerChoice == "scissors" && playerChoice == "rock"){
+        return alert(`Win! you chose ${playerChoice}, computer chose ${computerChoice}` )
+    }else {return alert(`Lose! you chose ${playerChoice}, computer chose ${computerChoice}`)}
+}
