@@ -12,6 +12,8 @@ rock.addEventListener('click', () => {
   playRound(playerChoice="rock");
 })
 
+const choices = ["rock", "paper", "scissors"];
+
 let playerChoice = "";
 
 function getComputerChoice() {
@@ -19,10 +21,8 @@ function getComputerChoice() {
     return computerChoice;
   }
 
-
 function playRound() {
-    const computerChoice = getComputerChoice;
-    getComputerChoice;
+    getComputerChoice();
     if(computerChoice == playerChoice){
     return alert(`Tie! you chose ${playerChoice}, computer chose ${computerChoice}`)}
     else if (computerChoice == "rock" && playerChoice == "paper"
