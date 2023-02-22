@@ -12,6 +12,18 @@ rock.addEventListener('click', () => {
   playRound(playerChoice="rock");
 })
 
+const paper = document.querySelector('#paper');
+paper.innerText = "paper";
+paper.addEventListener('click', () => {
+  playRound(playerChoice="paper");
+})
+
+const scissors = document.querySelector('#scissors');
+scissors.innerText = "scissors";
+scissors.addEventListener('click', () => {
+  playRound(playerChoice="scissors");
+})
+
 const choices = ["rock", "paper", "scissors"];
 
 let playerChoice = "";
