@@ -35,11 +35,33 @@ function getComputerChoice() {
 
 function playRound() {
     getComputerChoice();
+    let result = "";
     if(computerChoice == playerChoice){
-    return alert(`Tie! you chose ${playerChoice}, computer chose ${computerChoice}`)}
-    else if (computerChoice == "rock" && playerChoice == "paper"
+        result = "tie";
+        document.getElementById("result").innerHTML = result;
+    return alert(`Tie! you chose ${playerChoice}, computer chose ${computerChoice}`,)
+    }else if (computerChoice == "rock" && playerChoice == "paper"
     || computerChoice == "paper" && playerChoice == "scissors"
     || computerChoice == "scissors" && playerChoice == "rock"){
-        alert(`Win! you chose ${playerChoice}, computer chose ${computerChoice}` )
-    }else {alert(`Lose! you chose ${playerChoice}, computer chose ${computerChoice}`)}
+            result = "win";
+            document.getElementById("result").innerHTML = result;
+            console.log(result);
+        alert(`Win! you chose ${playerChoice}, computer chose ${computerChoice}`,)
+    }else {
+            result = "lose";
+            document.getElementById("result").innerHTML = result;
+            console.log(result);
+        alert(`Lose! you chose ${playerChoice}, computer chose ${computerChoice}`)
+    }
 }
+
+
+function playGame() {
+    playRound();
+}
+
+const game = document.querySelector('#game');
+game.innerText = "game";
+game.addEventListener('click', () => {
+  document.getElementById("result").innerHTML = "Choose you weapon!";
+})
