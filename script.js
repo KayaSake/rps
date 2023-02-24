@@ -33,6 +33,8 @@ scissors.addEventListener('click', () => {
   declareWinner();
 })
 
+
+
 const choices = ["rock", "paper", "scissors"];
 
 let playerChoice = "";
@@ -59,7 +61,7 @@ function playRound() {
     || computerChoice == "scissors" && playerChoice == "rock"){
             result = "win";
             document.getElementById("result").innerHTML = result;
-            document.getElementById("playerScore").innerHTML = playerScore += 1
+            document.getElementById("playerScore").innerHTML = playerScore += 1;
 
             console.log(result);
         alert(`Win! you chose ${playerChoice}, computer chose ${computerChoice}`,)
@@ -67,7 +69,7 @@ function playRound() {
             result = "lose";
             document.getElementById("result").innerHTML = result;
             console.log(result);
-            document.getElementById('computerScore').innerHTML = computerScore += 1
+            document.getElementById('computerScore').innerHTML = computerScore += 1;
         alert(`Lose! you chose ${playerChoice}, computer chose ${computerChoice}`)
     }
 }
@@ -78,4 +80,5 @@ function declareWinner (){
         console.log("Better luck next time!")}else{ 
             console.log("keep on going...")
         }
+
     }
