@@ -42,9 +42,9 @@ function getComputerChoice() {
     return computerChoice;
   }
 
-  let playerScore = "0";
+  let playerScore = 0
   document.getElementById("playerScore").innerHTML = playerScore;
-  let computerScore = 0;
+  let computerScore = 0
   document.getElementById("computerScore").innerHTML = computerScore;
 
 function playRound() {
@@ -59,7 +59,7 @@ function playRound() {
     || computerChoice == "scissors" && playerChoice == "rock"){
             result = "win";
             document.getElementById("result").innerHTML = result;
-            document.getElementById("playerScore").innerHTML = playerScore++;
+            document.getElementById("playerScore").innerHTML = playerScore += 1
 
             console.log(result);
         alert(`Win! you chose ${playerChoice}, computer chose ${computerChoice}`,)
@@ -67,7 +67,7 @@ function playRound() {
             result = "lose";
             document.getElementById("result").innerHTML = result;
             console.log(result);
-            document.getElementById('computerScore').innerHTML = computerScore ++;
+            document.getElementById('computerScore').innerHTML = computerScore += 1
         alert(`Lose! you chose ${playerChoice}, computer chose ${computerChoice}`)
     }
 }
